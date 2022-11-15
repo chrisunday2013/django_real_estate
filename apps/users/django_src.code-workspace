@@ -1,0 +1,9 @@
+{
+	"folders": [
+		{
+			"name": "django_src",
+			"path": "../.."
+		}
+	],
+	"settings": {}
+}
