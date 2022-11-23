@@ -11,3 +11,12 @@ psycopg2-binary==2.9.1
 flake8==3.9.2
 black==21.6b0
 isort==5.9.3
+djoser==2.1.0 
+djangorestframework-simplejwt==4.8.0
+PyJWT==2.1.0
+
+
+# pip install -r requirements.txt
+# from com prompt, cd django_estate then cd django_src
+# mailtrap.io
+# create an inbox in mail trap, and add mail trap credentials to env and development
