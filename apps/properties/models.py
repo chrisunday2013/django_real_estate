@@ -36,7 +36,7 @@ class Property(TimeStampedUUIDModel):
         OTHER = "Other", _("Other")       
 
     user = models.ForeignKey(User, verbose_name=_("Agent, Seller or Buyer"),
-                   related_name="agent_buyer", on_delete=models.DO_NOTHING),
+                   related_name="agent_buyer", on_delete=models.DO_NOTHING,)
     title = models.CharField(verbose_name=_("Property Title"), max_length=250)   
     slug = AutoSlugField(populate_from="title", unique=True, always_update=True)   
     ref_code = models.CharField(verbose_name=_("Property Reference Code"), max_length=255,
@@ -54,7 +54,7 @@ class Property(TimeStampedUUIDModel):
                       default=0.0)    
     tax = models.DecimalField(verbose_name=_("Property Tax"), max_digits=8, decimal_places=2, 
                        default=0.15, help_text="15% property tax charged")    
-    plot_area=models.DecimalField(verbose_name=_("Plot Area(m^2"),
+    plot_area=models.DecimalField(verbose_name=_("Plot Area(m^2)"),
                        max_digits=8, decimal_places=2, default=0.0)   
     total_floors=models.IntegerField(verbose_name=_("Number of floors"), default=0)
     bedrooms=models.IntegerField(verbose_name=_("Bedrooms"), default=1)
